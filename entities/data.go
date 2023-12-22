@@ -17,8 +17,9 @@ type Todo struct {
 }
 
 type Resol struct {
-	Id    uint
-	Resol string
+	IdR    uint
+	Resolco string
+	Resolce string
 	CreatedAt time.Time
 	UpdatedAt time.Time
 }

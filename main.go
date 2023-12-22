@@ -39,6 +39,7 @@ func main() {
 	mux.HandleFunc("/register", models.Register)
 	mux.HandleFunc("/logout", controllers.LogoutHandler)
 	mux.HandleFunc("/dashboard/delete", controllers.DeleteTodoHandler)
+	mux.HandleFunc("/dashboard/deleter", controllers.DeleteResolHandler)
 
 	log.Println("Starting Web at port 8080")
 	err := http.ListenAndServe("localhost:8080", mux)

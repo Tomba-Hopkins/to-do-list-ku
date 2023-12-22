@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="static/dashboard/style.css">
     <!-- native -->
     <!-- <link rel="stylesheet" href="../../assets/dashboard/style.css"> -->
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="teleport">
@@ -36,32 +41,8 @@
             </div>
         </div>
     </div>
-    
 
-    <div class="main-puter">
-        <h1 class="punchline2" id="resolusi">Resolusi 2024</h1>
-            <div class="card">
-                <div class="front">
-                    <h1>Front</h1>
-                    <ul class="list">
-                        <li>tes</li>
-                        <li>tes</li>
-                        <li>tes</li>
-                    </ul>
-                </div>
-                <div class="back">
-                    <h1>Back</h1>
-                </div>
-            </div>
-        </div>
-
-
-    <div class="catatan">
-        <h1>soon</h1>
-    </div>
-
-
-<!-- Melayang -->
+    <!-- Melayang -->
 <div class="melayang1">
     <div class="melayang-dalem1">
         <h1>Him To-Do-List</h1>
@@ -74,7 +55,7 @@
         </form>
         {{ range .todos}}
             <p> {{ .Todoco }} <span style="margin: 0 5px;">| {{ .CreatedAt }} </span>
-                <a href="dashboard/delete?id={{ .Id }} " style="text-decoration: none; margin: 4px 5px;">
+                <a href="dashboard/delete?id={{ .Id }}" onclick="return alert('yakin mau hapus?')" style="text-decoration: none; margin: 4px 5px;">
                     <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"> <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" fill="red"></path> <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" fill="red"></path> </svg>
                 </a></p>
         {{ end }}
@@ -106,6 +87,52 @@
         </div>
     </div>
 </div>
+    
+
+    <div class="main-puter">
+        <h1 class="punchline2" id="resolusi">Resolusi 2024</h1>
+            <div class="card">
+                <div class="front">
+                    <h1>For Him</h1>
+                    {{ range .resols }}
+                    <p> {{ .Resolco }} <span style="margin: 0 5px;">|</span><a href="dashboard/deleter?id={{ .IdR }}" onclick="return alert('yakin mau hapus?')" style="text-decoration: none; margin: 4px 5px;">
+                        <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="12" height="14" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"> <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" fill="red"></path> <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" fill="red"></path> </svg>
+                    </a></p>
+                     {{ end }}
+
+                </div>
+                <div class="back">
+                    <h1>For Her</h1>
+                    {{ range .resols}}
+                    <p> {{ .Resolce}} <span style="margin: 0 5px;">|</span><a href="dashboard/deleter?id={{ .IdR }}" onclick="return alert('yakin mau hapus?')" style="text-decoration: none; margin: 4px 5px;">
+                        <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="12" height="14" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"> <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" fill="red"></path> <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" fill="red"></path> </svg>
+                    </a></p>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="resol-form">
+                <form method="POST">
+                    <label for="resol1" class="plus-resol1">
+                        +
+                    </label>
+                    <input name="resol1" placeholder="For Man" type="text" id="resol1" class="hidden-resol1">
+                    <hr>
+                    <label for="resol2" class="plus-resol2">
+                        + 
+                    </label>
+                    <input name="resol2" placeholder="For Woman" type="text" id="resol2" class="hidden-resol2">
+                    <button type="submit" value="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    <div class="catatan">
+        <h1>soon</h1>
+    </div>
+
+
+
 
 <!-- VERSI GO -->
 <script src="static/dashboard/script.js"></script> 
