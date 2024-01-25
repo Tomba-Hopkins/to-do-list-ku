@@ -1,8 +1,8 @@
 package models
 
 import (
-	"to-do-list/config"
-	"to-do-list/entities"
+	"github.com/Tomba-Hopkins/to-do-list-ku/config"
+	"github.com/Tomba-Hopkins/to-do-list-ku/entities"
 )
 
 func GetAll() []entities.Todo {

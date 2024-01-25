@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strconv"
 	"time"
-	"to-do-list/entities"
-	"to-do-list/models"
 
+	"github.com/Tomba-Hopkins/to-do-list-ku/entities"
+	"github.com/Tomba-Hopkins/to-do-list-ku/models"
 	"github.com/kataras/go-sessions/v3"
 )
 

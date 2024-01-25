@@ -2,9 +2,9 @@ package models
 
 import (
 	"net/http"
-	"to-do-list/config"
-	"to-do-list/entities"
 
+	"github.com/Tomba-Hopkins/to-do-list-ku/config"
+	"github.com/Tomba-Hopkins/to-do-list-ku/entities"
 	"github.com/kataras/go-sessions/v3"
 	"golang.org/x/crypto/bcrypt"
 )

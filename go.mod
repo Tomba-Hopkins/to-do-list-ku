@@ -1,4 +1,4 @@
-module to-do-list
+module github.com/Tomba-Hopkins/to-do-list-ku
 
 go 1.21.2
 

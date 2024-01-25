@@ -3,9 +3,10 @@ package main
 import (
 	"log"
 	"net/http"
-	"to-do-list/config"
-	"to-do-list/controllers"
-	"to-do-list/models"
+
+	"github.com/Tomba-Hopkins/to-do-list-ku/config"
+	"github.com/Tomba-Hopkins/to-do-list-ku/controllers"
+	"github.com/Tomba-Hopkins/to-do-list-ku/models"
 )
 
 func main() {
